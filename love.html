@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:linear-gradient(135deg,#fff0f5,#ffe4ec);
+font-family:'Poppins',sans-serif;
+overflow-x:hidden;
+min-height:100vh;
+}
+
+.container{
+text-align:center;
+padding:50px 20px;
+}
+
+.title{
+font-family:'Great Vibes',cursive;
+font-size:90px;
+color:#c2185b;
+text-shadow:0 0 15px rgba(194,24,91,0.4);
+animation:glow 3s infinite alternate;
+}
+
+.subtitle{
+margin-top:15px;
+font-size:22px;
+color:#a0004d;
+}
+
+@keyframes glow{
+from{
+transform:scale(1);
+}
+to{
+transform:scale(1.03);
+}
+}
+
+.heart{
+position:fixed;
+font-size:25px;
+animation:float 8s linear infinite;
+opacity:.7;
+z-index:-1;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+}
+100%{
+transform:translateY(-120px);
+}
+}
+
+.btn{
+margin-top:30px;
+padding:15px 35px;
+border:none;
+border-radius:40px;
+background:#c2185b;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:.4s;
+}
+
+.btn:hover{
+transform:scale(1.08);
+background:#a0004d;
+}
+
+.card{
+display:none;
+max-width:850px;
+margin:40px auto;
+background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 15px 40px rgba(0,0,0,.12);
+animation:fade 1s ease;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.card h2{
+font-family:'Great Vibes',cursive;
+font-size:55px;
+color:#c2185b;
+margin-bottom:20px;
+}
+
+.card p{
+font-size:18px;
+line-height:1.9;
+color:#555;
+}
+
+.surprise-box{
+display:none;
+margin-top:30px;
+padding:25px;
+background:#fff0f6;
+border-radius:20px;
+animation:fade 1s ease;
+}
+
+.surprise-box h3{
+color:#c2185b;
+margin-bottom:15px;
+}
+
+footer{
+margin-top:50px;
+padding:20px;
+color:#a0004d;
+font-size:16px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="hearts"></div>
+
+<div class="container">
+
+<h1 class="title">My Love ❤️</h1>
+
+<p class="subtitle">
+You are the most beautiful part of my life.
+</p>
+
+<button class="btn" onclick="showLetter()">
+Open My Letter
+</button>
+
+<div class="card" id="letter">
+
+<h2>To My Love</h2>
+
+<p>
+There are many beautiful things in this world,
+but nothing compares to the happiness that you bring into my life.
+
+You are my comfort during difficult days,
+my smile during ordinary moments,
+and my favorite person to think about every single day.
+
+Thank you for your kindness,
+your care,
+your patience,
+and for being exactly who you are.
+
+You inspire me to become a better person.
+You make simple moments feel special.
+And no matter how much time passes,
+I will always appreciate having you in my life.
+
+You are not only my love,
+but also my happiness,
+my peace,
+and one of the greatest blessings I could ever ask for.
+
+I truly believe that meeting you was one of the best things that ever happened to me.
+</p>
+
+<button class="btn" onclick="showSurprise1()">
+First Surprise ✨
+</button>
+
+<div class="surprise-box" id="surprise1">
+
+<h3>🌹 A Special Truth</h3>
+
+<p>
+If someone asked me what my favorite place is,
+I would simply say:
+Anywhere with you.
+</p>
+
+<button class="btn" onclick="showSurprise2()">
+Second Surprise 💖
+</button>
+
+</div>
+
+<div class="surprise-box" id="surprise2">
+
+<h3>💌 Hidden Letter</h3>
+
+<p>
+You deserve all the happiness,
+all the success,
+all the love,
+and all the beautiful moments this world can offer.
+
+Never forget how special you are.
+
+Your smile brightens days.
+
+Your presence brings peace.
+
+And your heart makes the world a better place.
+
+Thank you for being you.
+</p>
+
+<button class="btn" onclick="showFinal()">
+Final Surprise ❤️
+</button>
+
+</div>
+
+<div class="surprise-box" id="surprise3">
+
+<h3>❤️ Final Message ❤️</h3>
+
+<p style="font-size:24px;color:#c2185b;font-weight:bold;">
+You Are My Love.<br><br>
+You Are My Favorite Person.<br><br>
+You Are The Best. ❤️
+</p>
+
+</div>
+
+</div>
+
+<footer>
+Made With Love ❤️
+</footer>
+
+</div>
+
+<script>
+
+function showLetter(){
+document.getElementById("letter").style.display="block";
+}
+
+function showSurprise1(){
+document.getElementById("surprise1").style.display="block";
+}
+
+function showSurprise2(){
+document.getElementById("surprise2").style.display="block";
+}
+
+function showFinal(){
+document.getElementById("surprise3").style.display="block";
+}
+
+const hearts=document.getElementById("hearts");
+
+for(let i=0;i<30;i++){
+
+let heart=document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML="❤";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=
+(Math.random()*5+5)+"s";
+
+heart.style.fontSize=
+(Math.random()*20+15)+"px";
+
+hearts.appendChild(heart);
+
+}
+
+</script>
+
+</body>
+</html>
